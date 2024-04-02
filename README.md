@@ -31,7 +31,7 @@ Now for the app secsion we need to create directory for the app.
 $ mkdir app
 $ cd app
 $ pip install flask
-*Flask is python library for web applications.
+#Flask is python library for web applications.
 $ vim app.py
 ```
 ```python
@@ -148,7 +148,7 @@ $ vim kind-config.yaml
 
 Put the scrip inside the kind-config.yaml.
 
-```ymal
+```yaml
 apiVersion: kind.x-k8s.io/v1alpha4
 kind: Cluster
 nodes:
@@ -174,7 +174,7 @@ $ vim metallb-config.yaml
 
 This configerison file will choose the ip for the nodes by the pool you put their.
 
-```ymal
+```yaml
 apiVersion: metallb.io/v1beta1
 kind: IPAddressPool
 metadata:
@@ -198,7 +198,7 @@ $ kubectl get nodes -o wide
 
 It will show you internal ip and modify the metallb-config to your internal ip. for my is:
 
-```ymal
+```yaml
 # example where to put the ip
 spec:
   addresses:
